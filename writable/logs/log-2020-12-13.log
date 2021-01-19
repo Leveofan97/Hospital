@@ -1,0 +1,11 @@
+CRITICAL - 2020-12-13 05:01:52 --> Unable to connect to the database.
+#0 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 /home/leveofan/PhpstormProjects/60971kaa/app/Models/RatingModel.php(9): CodeIgniter\Model->findAll()
+#4 /home/leveofan/PhpstormProjects/60971kaa/app/Controllers/Rating.php(11): App\Models\RatingModel->getRating()
+#5 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Rating->index()
+#6 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rating))
+#7 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/leveofan/PhpstormProjects/60971kaa/public/index.php(21): CodeIgniter\CodeIgniter->run()
+#9 {main}

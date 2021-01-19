@@ -1,0 +1,18 @@
+CRITICAL - 2020-12-15 11:18:03 --> Invalid file: player/view.php
+#0 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('player/view.php')
+#1 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render('player/view', Array, true)
+#2 /home/leveofan/PhpstormProjects/60971kaa/app/Controllers/Rating.php(19): view('player/view', Array)
+#3 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Rating->view('1')
+#4 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rating))
+#5 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/leveofan/PhpstormProjects/60971kaa/public/index.php(21): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-12-15 11:21:23 --> Invalid file: player/view.php
+#0 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('player/view.php')
+#1 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render('player/view', Array, true)
+#2 /home/leveofan/PhpstormProjects/60971kaa/app/Controllers/Player.php(19): view('player/view', Array)
+#3 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Player->view('1')
+#4 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Player))
+#5 /home/leveofan/PhpstormProjects/60971kaa/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/leveofan/PhpstormProjects/60971kaa/public/index.php(21): CodeIgniter\CodeIgniter->run()
+#7 {main}
