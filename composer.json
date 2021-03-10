@@ -39,8 +39,4 @@
 			"url": "git@github.com:benedmunds/CodeIgniter-Ion-Auth.git"
 		}
 	}
-	"post-install-cmd": {
-     		"php artisan clear-compiled",
-     		"chmod -R 777 public/"
-	}
 }
