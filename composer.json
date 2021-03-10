@@ -21,10 +21,6 @@
 			"Tests\\Support\\": "tests/_support"
 		}
 	},
-	"post-install-cmd": {
-     		"php artisan clear-compiled",
-     		"chmod -R 777 public/"
-	},
 	"scripts": {
 		"post-update-cmd": [
 			"@composer dump-autoload"
@@ -42,5 +38,9 @@
 			"type": "vcs",
 			"url": "git@github.com:benedmunds/CodeIgniter-Ion-Auth.git"
 		}
+	}
+	"post-install-cmd": {
+     		"php artisan clear-compiled",
+     		"chmod -R 777 public/"
 	}
 }
