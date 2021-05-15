@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Система учета больных</title>
+    <title>Приложения футбольных команд</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6e9b058a28.js"></script>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">База больных
+                <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Все игроки
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="<?= base_url()?>/index.php/player">Отчеты</a>
-                    <a class="dropdown-item" href="<?= base_url()?>/player/store">Создать отчет</a>
+                    <a class="dropdown-item" href="<?= base_url()?>/index.php/player">Игроки</a>
+                    <a class="dropdown-item" href="<?= base_url()?>/player/store">Добавить игрока</a>
                 </div>
             </li>
 

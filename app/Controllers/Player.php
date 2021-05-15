@@ -34,24 +34,15 @@ class Player extends BaseController
 
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'FIO' => 'required|min_length[3]|max_length[255]',
-                'Diagnos'  => 'required',
-                'Age'  => 'required',
-                'Sex'  => 'required',
-                'Arrived'  => 'required',
-                'Leftleave'  => 'required',
-                'Simptoms'  => 'required',
+                'Amplua'  => 'required',
+                'id_team'  => 'required',
             ]))
         {
             $model = new RatingModel();
             $model->save([
                 'id_team' => 1,
                 'FIO' => $this->request->getPost('FIO'),
-                'Diagnos' => $this->request->getPost('Diagnos'),
-                'Age' => $this->request->getPost('Age'),
-                'Sex' => $this->request->getPost('Sex'),
-                'Arrived' => $this->request->getPost('Arrived'),
-                'Leftleave' => $this->request->getPost('Leftleave'),
-                'Simptoms' => $this->request->getPost('Simptoms'),
+                'Amplua' => $this->request->getPost('Amplua'),
             ]);
             session()->setFlashdata('message', lang('Curating.rating_create_success'));
             return redirect()->to('/player');
@@ -81,12 +72,7 @@ class Player extends BaseController
                 'id' =>'required',
                 'id_team' =>'required',
                 'FIO' => 'required',
-                'Diagnos'  => 'required',
-                'Age'  => 'required',
-                'Sex'  => 'required',
-                'Arrived'  => 'required',
-                'Leftleave'  => 'required',
-                'Simptoms'  => 'required',
+                'Amplua'  => 'required',
             ]))
         {
             $model = new RatingModel();
@@ -94,12 +80,7 @@ class Player extends BaseController
                 'id'=> $this->request->getPost('id'),
                 'id_team' => $this->request->getPost('id_team'),
                 'FIO' => $this->request->getPost('FIO'),
-                'Diagnos' => $this->request->getPost('Diagnos'),
-                'Age' => $this->request->getPost('Age'),
-                'Sex' => $this->request->getPost('Sex'),
-                'Arrived' => $this->request->getPost('Arrived'),
-                'Leftleave' => $this->request->getPost('Leftleave'),
-                'Simptoms' => $this->request->getPost('Simptoms'),
+                'Amplua' => $this->request->getPost('Amplua'),
             ]);
             //session()->setFlashdata('message', lang('Curating.rating_update_success'));
 

@@ -11,13 +11,8 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">ФИО: <?= esc($player['FIO']); ?></h5>
-                            <p class="card-text">Лечащий врач: <?= esc($player['id_team']); ?></p>
-                            <p class="card-text">Диагноз: <?= esc($player['Diagnos']); ?></p>
-                            <p class="card-text">Возраст: <?= esc($player['Age']); ?></p>
-                            <p class="card-text">Пол: <?= esc($player['Sex']); ?></p>
-                            <p class="card-text">Дата поступления: <?= esc($player['Arrived']); ?></p>
-                            <p class="card-text">Дата выписки: <?= esc($player['Leftleave']); ?></p>
-                            <p class="card-text">Симптомы: <?= esc($player['Simptoms']); ?></p>
+                            <p class="card-text">Команда: <?= esc($player['id_team']); ?></p>
+                            <p class="card-text">Роль в команде: <?= esc($player['Amplua']); ?></p>
                         </div>
 
                         <div style="
@@ -25,6 +20,10 @@
                              border-bottom-width: -;
                              margin-bottom: 27px;">
                             <a class="btn btn-primary" href="<?= base_url()?>/player/edit/<?= esc($player['id']); ?>" class="btn btn-primary">Редактировать</a
+                        </div>
+                        <div style="
+                             margin-top: 5px;">
+                            <a class="btn btn-danger" href="<?= base_url()?>/player/delete/<?= esc($player['id']); ?>" class="btn btn-primary">Удалить</a
                         </div>
                     </div>
                 </div>

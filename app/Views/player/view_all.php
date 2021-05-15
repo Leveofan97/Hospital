@@ -15,7 +15,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title"><?= esc($item['FIO']); ?></h5>
-                                <p class="card-text"><?= esc($item['Diagnos']); ?></p>
+                                <p class="card-text"><?= esc($item['Amplua']); ?></p>
                                 <a href="<?= base_url()?>/index.php/player/view/<?= esc($item['id']); ?>" class="btn btn-primary">Просмотреть</a>
 
                             </div>

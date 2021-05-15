@@ -9,36 +9,24 @@ class Player extends Seeder
         $data = [
 
             'FIO' => 'Иванов Алексей Арестархович',
-            'Diagnos' => 'Катаракта',
-            'Age' => 50,
-            'Sex' => 'Муж',
-            'Arrived' => '2021-01-30',
-            'Leftleave' => '2021-02-14',
-            "Simptoms" => 'Плохо видит',
-        ];
-        $this->db->table('player')->insert($data);
-
-        $data = [
-
-            'FIO' => 'Максимов Йохан Викторович',
-            'Diagnos' => 'Шизофрения',
-            'Age' => 30,
-            'Sex' => 'Муж',
-            'Arrived' => '2021-02-10',
-            'Leftleave' => '2021-02-20',
-            "Simptoms" => 'Слышит голоса',
+            'Amplua' => 'Защитник',
+            'id_team' =>'1'
         ];
         $this->db->table('player')->insert($data);
 
         $data = [
 
             'FIO' => 'Алексеева Иван Артемович',
-            'Diagnos' => 'Язва желудка',
-            'Age' => 24,
-            'Sex' => 'Муж',
-            'Arrived' => '2021-02-14',
-            'Leftleave' => '2021-02-30',
-            "Simptoms" => 'Боли в желудке',
+            'Amplua' => 'Вратарь',
+            'id_team' =>'2'
+        ];
+        $this->db->table('player')->insert($data);
+
+        $data = [
+
+            'FIO' => 'Иванов Иван Дмитриевич',
+            'Amplua' => 'Нападающий',
+            'id_team' =>'3'
         ];
         $this->db->table('player')->insert($data);
     }
