@@ -1,5 +1,7 @@
 .env
 vendor
+.idea
+
 writable/session/*
 !writable/session/index.html
 
