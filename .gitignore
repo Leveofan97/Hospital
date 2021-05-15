@@ -1,0 +1,16 @@
+.env
+vendor
+writable/session/*
+!writable/session/index.html
+
+writable/cache/*
+!writable/cache/index.html
+
+writable/uploads/*
+!writable/uploads/index.html
+
+writable/logs/*
+!writable/logs/index.html
+
+writable/debugbar/*
+
