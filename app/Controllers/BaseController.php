@@ -14,6 +14,8 @@ namespace App\Controllers;
  * @package CodeIgniter
  */
 
+use App\Services\GoogleClient;
+use App\Services\IonAuthGoogle;
 use CodeIgniter\Controller;
 use IonAuth\Libraries\IonAuth;
 
@@ -38,12 +40,8 @@ class BaseController extends Controller
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
-        //--------------------------------------------------------------------
-        // Preload any models, libraries, etc, here.
-        //--------------------------------------------------------------------
-        // E.g.:
-        // $this->session = \Config\Services::session();
-        $this->ionAuth = new IonAuth();
+        $this->google_client = new GoogleClient();
+        $this->ionAuth = new IonAuthGoogle();
     }
     protected function withIon(array $data = [])
     {
