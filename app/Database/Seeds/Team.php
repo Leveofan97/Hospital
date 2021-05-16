@@ -58,13 +58,6 @@ class Team extends Seeder
 
             $data = [
 
-                'name' => 'Команда 7',
-                'id' =>'7'
-            ];
-            $this->db->table('team')->insert($data);
-
-            $data = [
-
                 'name' => 'Команда 8',
                 'id' =>'8'
             ];
