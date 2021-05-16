@@ -40,7 +40,7 @@ class Player extends BaseController
         {
             $model = new RatingModel();
             $model->save([
-                'id_team' => 1,
+                'id_team' => $this->request->getPost('id_team'),
                 'FIO' => $this->request->getPost('FIO'),
                 'Amplua' => $this->request->getPost('Amplua'),
             ]);
