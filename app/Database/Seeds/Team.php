@@ -28,7 +28,7 @@ class Team extends Seeder
             ];
             $this->db->table('team')->insert($data);
 		
-		$data = [
+	    $data = [
 
                 'name' => 'Команда 4',
                 'id' =>'4'
@@ -47,9 +47,8 @@ class Team extends Seeder
                 'name' => 'Команда 6',
                 'id' =>'6'
             ];
-            $this->db->table('team')->insert($data);
-		
-		$data = [
+            $this->db->table('team')->insert($data);	
+	 $data = [
 
                 'name' => 'Команда 7',
                 'id' =>'7'
@@ -62,15 +61,14 @@ class Team extends Seeder
                 'id' =>'8'
             ];
             $this->db->table('team')->insert($data);
-		
-		 $data = [
+
+            $data = [
 
                 'name' => 'Команда 9',
                 'id' =>'9'
             ];
             $this->db->table('team')->insert($data);
-
-            $data = [
+		$data = [
 
                 'name' => 'Команда 10',
                 'id' =>'10'
