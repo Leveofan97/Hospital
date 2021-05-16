@@ -29,6 +29,7 @@ class BaseController extends Controller
      */
     protected $helpers = [];
     protected $ionAuth;
+    protected $google_client;
     /**
      * Constructor.
      */
@@ -47,6 +48,7 @@ class BaseController extends Controller
     protected function withIon(array $data = [])
     {
         $data['ionAuth'] = $this->ionAuth;
+        $data['authUrl'] = $this->google_client->getGoogleClient()->createAuthUrl();
         return $data;
     }
 }
