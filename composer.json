@@ -8,7 +8,7 @@
 		"php": ">=7.2",
 		"codeigniter4/framework": "^4",
 		"benedmunds/codeigniter-ion-auth": "4.x-dev",
-		"smi2/phpclickhouse": "dev-master"
+		"google/apiclient": "^2.7"
 	},
 	"require-dev": {
 		"fzaninotto/faker": "^1.9@dev",
