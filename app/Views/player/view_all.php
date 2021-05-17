@@ -10,7 +10,7 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row">
                         <div class="col-md-4 d-flex align-items-center">
-                            <img height="150" src="https://www.flaticon.com/svg/static/icons/svg/163/163801.svg" class="card-img" alt="<?= esc($item['FIO']); ?>">
+                            <img height="150" src="<?= esc($item['picture_url']); ?>" class="card-img" alt="<?= esc($item['FIO']); ?>">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
