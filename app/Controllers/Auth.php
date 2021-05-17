@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Services\GoogleClient;
 use App\Services\IonAuthGoogle;
+use Google_Service_Oauth2;
 use IonAuth\Libraries\IonAuth;
 
 class Auth extends \IonAuth\Controllers\Auth
