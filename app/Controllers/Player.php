@@ -33,17 +33,50 @@ class Player extends BaseController
         helper(['form','url']);
 
         if ($this->request->getMethod() === 'post' && $this->validate([
-                'FIO' => 'required|min_length[3]|max_length[255]',
-                'Amplua'  => 'required',
+                'FIO' => 'required',
                 'id_team'  => 'required',
+                'Amplua'  => 'required',
+                'picture'  => 'is_image[picture]|max_size[picture,1024]',
             ]))
         {
+            $insert = null;
+            //получение загруженного файла из HTTP-запроса
+            $file = $this->request->getFile('picture');
+            if ($file->getSize() != 0) {
+                //подключение хранилища
+                $s3 = new S3Client([
+                    'version' => 'latest',
+                    'region' => 'us-east-1',
+                    'endpoint' => getenv('S3_ENDPOINT'),
+                    'use_path_style_endpoint' => true,
+                    'credentials' => [
+                        'key' => getenv('S3_KEY'), //чтение настроек окружения из файла .env
+                        'secret' => getenv('S3_SECRET'), //чтение настроек окружения из файла .env
+                    ],
+                ]);
+                //получение расширения имени загруженного файла
+                $ext = explode('.', $file->getName());
+                $ext = $ext[count($ext) - 1];
+                //загрузка файла в хранилище
+                $insert = $s3->putObject([
+                    'Bucket' => getenv('S3_BUCKET'), //чтение настроек окружения из файла .env
+                    //генерация случайного имени файла
+                    'Key' => getenv('S3_KEY') . '/file' . rand(100000, 999999) . '.' . $ext,
+                    'Body' => fopen($file->getRealPath(), 'r+')
+                ]);
+
+            }
             $model = new RatingModel();
-            $model->save([
-                'id_team' => $this->request->getPost('id_team'),
+            //подготовка данных для модели
+            $data = [
                 'FIO' => $this->request->getPost('FIO'),
+                'id_team' => $this->request->getPost('id_team'),
                 'Amplua' => $this->request->getPost('Amplua'),
-            ]);
+            ];
+            //если изображение было загружено и была получена ссылка на него то даобавить ссылку в данные модели
+            if (!is_null($insert))
+                $data['picture_url'] = $insert['ObjectURL'];
+            $model->save($data);
             session()->setFlashdata('message', lang('Curating.rating_create_success'));
             return redirect()->to('/player');
         }
