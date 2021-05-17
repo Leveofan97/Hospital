@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 use App\Models\RatingModel;
+use Aws\S3\S3Client;
 
 class Player extends BaseController
 
