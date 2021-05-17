@@ -28,6 +28,14 @@
                 <?= $validation->getError('id_team') ?>
             </div>
         </div>
+        
+        <div class="form-group">
+            <label for="birthday">Изображение</label>
+            <input type="file" class="form-control-file <?= ($validation->hasError('picture')) ? 'is-invalid' : ''; ?>" name="picture">
+            <div class="invalid-feedback">
+                <?= $validation->getError('picture') ?>
+            </div>
+        </div>
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary" name="submit">Сохранить</button>
