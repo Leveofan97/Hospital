@@ -23,7 +23,13 @@
         </div>
         <div class="form-group">
             <label for="Amplua">Команда игрока</label>
-            <input type="text" class="form-control <?= ($validation->hasError('id_team')) ? 'is-invalid' : ''; ?>" name="id_team">
+                      
+            <select class="form-select"  name="id_team" aria-label="Default select example">
+                <option selected>Команда игрока</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
             <div class="invalid-feedback">
                 <?= $validation->getError('id_team') ?>
             </div>
