@@ -24,6 +24,9 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="<?= base_url()?>/index.php/player">Игроки</a>
                     <a class="dropdown-item" href="<?= base_url()?>/player/store">Добавить игрока</a>
+                    <?php if ($ionAuth->isAdmin()): ?>
+                        <a class="dropdown-item" href="<?= base_url()?>/player/viewAllWithUsers">Управление игроками</a>
+                    <?php endif ?>
                 </div>
             </li>
 
