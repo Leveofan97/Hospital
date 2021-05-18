@@ -2,14 +2,35 @@
 use CodeIgniter\Model;
 class RatingModel extends Model
 {
-protected $table = 'player'; //таблица, связанная с моделью
-//Перечень задействованных в модели полей таблицы
-protected $allowedFields = ['id_team', 'FIO', 'Amplua','picture_url'];
-public function getRating($id = null)
-{
-if (!isset($id)) {
-return $this->findAll();
-}
-return $this->where(['id' => $id])->first();
-}
+    protected $table = 'player'; //таблица, связанная с моделью
+    //Перечень задействованных в модели полей таблицы
+    protected $allowedFields = ['id_team', 'FIO', 'Amplua','picture_url', 'userid'];
+    public function getRating($id = null)
+    {
+        if (!isset($id)) {
+            return $this->findAll();
+        }
+        return $this->where(['id' => $id])->first();
+    }
+    //Добавить на гитхаб
+    public function getRatingWithUser($id = null, $search = '')
+    {
+        if($search != null){
+            $builder = $this->select('player.id, id_team, FIO, Amplua ,player.picture_url,email')
+                ->join('users','player.userid = users.id')
+                ->where('Amplua',$search)
+                ->orWhere('id_team ', (int)$search)
+                ->orWhere('email',$search,'both',null,true);
+                var_dump($search);
+        }else{
+            $builder = $this->select('player.id, id_team, FIO, Amplua ,player.picture_url,email')
+                ->join('users','player.userid = users.id');
+                var_dump($search);
+        }
+        if (!is_null($id))
+        {
+            return $builder->where(['player.id' => $id])->first();
+        }
+        return $builder;
+    }
 }
