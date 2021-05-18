@@ -30,6 +30,16 @@
                 <option value="3">Ливерпуль</option>
                 <option value="4">Бавария</option>
                 <option value="5">ПСЖ</option>
+                <option value="1">Реал Мадрид</option>
+                <option value="2">Манчестер Юнайтед</option>
+                <option value="3">Ливерпуль</option>
+                <option value="4">Бавария</option>
+                <option value="5">ПСЖ</option>
+                <option value="6">Атлетико М</option>
+                <option value="7">Ювентус</option>
+                <option value="8">Спартак Москва</option>
+                <option value="9">Зенит</option>
+                <option value="10">Интер Милан</option>
             </select>
         </div>
         
