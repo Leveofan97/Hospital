@@ -25,13 +25,22 @@
         </div>
 
         <div class="form-group">
-            <label for="name">Роль в команде</label>
-            <input type="text" class="form-control <?= ($validation->hasError('Amplua')) ? 'is-invalid' : ''; ?>" name="Amplua"
-                   value="<?= $player["Amplua"] ?>">
-            <div class="invalid-feedback">
-                <?= $validation->getError('Amplua') ?>
-            </div>
+            <label for="Amplua">Команда игрока</label>
+                      
+            <select class="form-control" name="id_team" required="">
+                <option value="1">Реал Мадрид</option>
+                <option value="2">Манчестер Юнайтед</option>
+                <option value="3">Ливерпуль</option>
+                <option value="4">Бавария</option>
+                <option value="5">ПСЖ</option>
+                <option value="6">Атлетико М</option>
+                <option value="7">Ювентус</option>
+                <option value="8">Спартак Москва</option>
+                <option value="9">Зенит</option>
+                <option value="10">Интер Милан</option>
+            </select>
         </div>
+                
         
         <div class="form-group">
             <label for="birthday">Изображение</label>
