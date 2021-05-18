@@ -24,15 +24,13 @@
         <div class="form-group">
             <label for="Amplua">Команда игрока</label>
                       
-            <select class="form-select"  name="id_team" aria-label="Default select example">
-                <option selected>Команда игрока</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="form-control" name="id_team" required="">
+                <option value="1">Реал Мадрид</option>
+                <option value="2">Манчестер Юнайтед</option>
+                <option value="3">Ливерпуль</option>
+                <option value="4">Бавария</option>
+                <option value="5">ПСЖ</option>
             </select>
-            <div class="invalid-feedback">
-                <?= $validation->getError('id_team') ?>
-            </div>
         </div>
         
         <div class="form-group">
