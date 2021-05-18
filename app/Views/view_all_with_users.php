@@ -15,7 +15,7 @@
                 <button class="btn btn-outline-success" type="submit" class="btn btn-primary">На странице</button>
                 </form>
                 <?= form_open('player/viewAllWithUsers',['style' => 'display: flex']); ?>
-                <input type="text" class="form-control ml-3" name="search" placeholder="Имя или описание" aria-label="Search"
+                <input type="text" class="form-control ml-3" name="search" placeholder="Роль в команде или email" aria-label="Search"
                        value="<?= $search; ?>">
                 <button class="btn btn-outline-success" type="submit" class="btn btn-primary">Найти</button>
                 </form>
