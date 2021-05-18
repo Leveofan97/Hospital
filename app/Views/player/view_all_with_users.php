@@ -41,9 +41,9 @@
                         <td><?= esc($item['id_team']); ?></td>
                         <td><?= esc($item['Amplua']); ?></td>
                         <td>
-                            <a href="<?= base_url()?>/rating/view/<?= esc($item['id']); ?>" class="btn btn-primary btn-sm">Просмотреть</a>
-                            <a href="<?= base_url()?>/rating/edit/<?= esc($item['id']); ?>" class="btn btn-warning btn-sm">Редактировать</a>
-                            <a href="<?= base_url()?>/rating/delete/<?= esc($item['id']); ?>" class="btn btn-danger btn-sm">Удалить</a>
+                            <a href="<?= base_url()?>/player/view/<?= esc($item['id']); ?>" class="btn btn-primary btn-sm">Просмотреть</a>
+                            <a href="<?= base_url()?>/player/edit/<?= esc($item['id']); ?>" class="btn btn-warning btn-sm">Редактировать</a>
+                            <a href="<?= base_url()?>/player/delete/<?= esc($item['id']); ?>" class="btn btn-danger btn-sm">Удалить</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
