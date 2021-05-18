@@ -2,6 +2,7 @@
 
 use App\Models\RatingModel;
 use Aws\S3\S3Client;
+use function Webmozart\Assert\Tests\StaticAnalysis\null;
 
 class Player extends BaseController
 
@@ -16,6 +17,48 @@ class Player extends BaseController
         $model = new RatingModel();
         $data ['player'] = $model->getRating();
         echo view('player/view_all', $this->withIon($data));
+    }
+    //Добавить на гитхаб
+    public function viewAllWithUsers()
+    {
+        if ($this->ionAuth->isAdmin())
+        {
+            //Подготовка значения количества элементов выводимых на одной странице
+            if (!is_null($this->request->getPost('per_page'))) //если кол-во на странице есть в запросе
+            {
+                //сохранение кол-ва страниц в переменной сессии
+                session()->setFlashdata('per_page', $this->request->getPost('per_page'));
+                $per_page = $this->request->getPost('per_page');
+            }
+            else {
+                $per_page = session()->getFlashdata('per_page');
+                session()->setFlashdata('per_page', $per_page); //пересохранение в сессии
+                if (is_null($per_page)) $per_page = '5'; //кол-во на странице по умолчанию
+            }
+            $data['per_page'] = $per_page;
+            //Обработка запроса на поиск
+            if (!is_null($this->request->getPost('search')))
+            {
+                session()->setFlashdata('search', $this->request->getPost('search'));
+                $search = $this->request->getPost('search');
+            }
+            else {
+                $search = session()->getFlashdata('search');
+                session()->setFlashdata('search', $search);
+                if (is_null($search)) $search = '';
+            }
+            $data['search'] = $search;
+            helper(['form','url']);
+            $model = new RatingModel();
+            $data['player'] = $model->getRatingWithUser(null,$search)->paginate($per_page, 'group1');
+            $data['pager'] = $model->pager;
+            echo view('player/view_all_with_users', $this->withIon($data));
+        }
+        else
+        {
+            session()->setFlashdata('message', lang('Curating.admin_permission_needed'));
+            return redirect()->to('/auth/login');
+        }
     }
 
     public function create()
@@ -35,7 +78,7 @@ class Player extends BaseController
 
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'FIO' => 'required',
-                'id_team'  => 'required',
+                'id_team'  => 'required|integer',
                 'Amplua'  => 'required',
                 'picture'  => 'is_image[picture]|max_size[picture,1024]',
             ]))
