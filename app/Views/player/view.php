@@ -6,7 +6,13 @@
             <div class="card mb-3" style="max-width: 640px;">
                 <div class="row">
                     <div class="col-md-4 d-flex align-items-center">
-                        <img height="200" src="<?= esc($player['picture_url']); ?>" class="card-img" alt="<?= esc($player['FIO']); ?>">
+                        <img style="
+  display: block;
+  max-width:180px;
+  max-height:200px;
+  width: auto;
+  height: auto;
+  padding-left: 10%;" src="<?= esc($player['picture_url']); ?>" class="card-img" alt="<?= esc($player['FIO']); ?>">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
