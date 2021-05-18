@@ -11,6 +11,6 @@ class RatingModel extends Model
             return $this->findAll();
         }
         $builder = $this->select('*')->join('team','player.id_team = team.id');
-        return $builder->where(['id' => $id])->first();
+        return $builder->where(['player.id' => $id])->first();
     }
 }
