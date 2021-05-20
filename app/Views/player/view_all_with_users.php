@@ -38,7 +38,7 @@
                         </td>
                         <td><?= esc($item['FIO']); ?></td>
                         <td><?= esc($item['email']); ?></td>
-                        <td><?= esc($item['id_team']); ?></td>
+                        <td> if($item['id_team'] == 1) Aboba</td>
                         <td><?= esc($item['Amplua']); ?></td>
                         <td>
                             <a href="<?= base_url()?>/player/view/<?= esc($item['id']); ?>" class="btn btn-primary btn-sm">Просмотреть</a>
