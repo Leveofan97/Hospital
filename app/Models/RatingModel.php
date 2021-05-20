@@ -22,12 +22,12 @@ class RatingModel extends Model
                 ->where('Amplua',$search)
                 ->orWhere('id_team ', (int)$search)
                 ->orWhere('email',$search,'both',null,true);
-                var_dump($search);
+                var_dump($builder);
         }else{
             $builder = $this->select('player.id, id_team, FIO, Amplua ,player.picture_url,email')
                 ->join('users','player.userid = users.id')
                 ->join('team','player.id_team = team.id');
-                var_dump($search);
+                var_dump($builder);
         }
         if (!is_null($id))
         {
