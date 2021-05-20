@@ -31,7 +31,7 @@ class RatingModel extends Model
         }
         if (!is_null($id))
         {
-            return $builder->where(['player.id' => $id])->first() 
+            return $builder->where(['player.id' => $id])->first(); 
             var_dump($builder);
         }
         return $builder;
