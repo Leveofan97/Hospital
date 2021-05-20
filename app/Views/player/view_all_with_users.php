@@ -38,7 +38,17 @@
                         </td>
                         <td><?= esc($item['FIO']); ?></td>
                         <td><?= esc($item['email']); ?></td>
-                        <td>  <?php if($item['id_team'] == 1) echo("Текст")?></td>
+                        <td>  <?php if($item['id_team'] == 1) echo("Реал Мадрид")
+                                    if($item['id_team'] == 2) echo("Манчестер Юнайтед")
+                                    if($item['id_team'] == 3) echo("Ливерпуль")
+                                    if($item['id_team'] == 4) echo("Бавария")
+                                    if($item['id_team'] == 5) echo("ПСЖ")
+                                    if($item['id_team'] == 6) echo("Атлетико М")
+                                    if($item['id_team'] == 7) echo("Ювентус")
+                                    if($item['id_team'] == 8) echo("Спартак Москва")
+                                    if($item['id_team'] == 9) echo("Зенит")
+                                    if($item['id_team'] == 10) echo("Интер Милан")
+                              ?></td>
                         <td><?= esc($item['Amplua']); ?></td>
                         <td>
                             <a href="<?= base_url()?>/player/view/<?= esc($item['id']); ?>" class="btn btn-primary btn-sm">Просмотреть</a>
