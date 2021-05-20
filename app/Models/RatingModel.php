@@ -18,6 +18,7 @@ class RatingModel extends Model
         if($search != null){
             $builder = $this->select('player.id, id_team, FIO, Amplua ,player.picture_url,email,name')
                 ->join('users','player.userid = users.id')
+                ->join('team','player.id_team = team.id')
                 ->where('Amplua',$search)
                 ->orWhere('id_team ', (int)$search)
                 ->orWhere('email',$search,'both',null,true);
