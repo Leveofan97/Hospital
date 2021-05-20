@@ -7,7 +7,7 @@
                         <a class="btn btn-primary btn-lg" role="button" href="<?= base_url()?>/player/viewAllWithUsers">Управление игроками</a>
                     <?php endif ?>
         <?php if ($ionAuth->isAdmin() == null): ?>
-                        <a class="btn btn-primary btn-lg" role="button" href="<?= base_url()?>/index/player">Игроки</a>
+                        <a class="btn btn-primary btn-lg" role="button" href="<?= base_url()?>/player">Игроки</a>
                     <?php endif ?>
     </div>
 <?= $this->endSection() ?>
