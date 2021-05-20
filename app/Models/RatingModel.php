@@ -16,7 +16,7 @@ class RatingModel extends Model
     public function getRatingWithUser($id = null, $search = '')
     {
         if($search != null){
-            $builder = $this->select('player.id, id_team, FIO, Amplua ,player.picture_url,email')
+            $builder = $this->select('player.id, id_team, FIO, Amplua ,player.picture_url,email,name')
                 ->join('users','player.userid = users.id')
                 ->join('team','player.id_team = team.id')
                 ->where('Amplua',$search)
