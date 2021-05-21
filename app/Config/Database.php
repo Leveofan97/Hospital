@@ -30,11 +30,11 @@ class Database extends \CodeIgniter\Database\Config
 	 * @var array
 	 */
 	public $default = [
-		'DSN'      => 'pgsql:host=ec2-54-72-155-238.eu-west-1.compute.amazonaws.com;port=5432;dbname=d4qt898so2n2hr;user=iywuiwzjcmdppo;password=d9cf1eb58f85a928bfee5e6d3386a6934c6bfbc5a8ff762eaf84cbfa95633e0d',//'pgsql:host=fyhwjzwddbxulj:bb66213e7335eae73efb2c94add11e7ba4bf1b03e661ed888cc10ac656963e94@ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/d6pl0k4sgp0a0d',
-		'hostname' => 'ec2-54-72-155-238.eu-west-1.compute.amazonaws.com',
-		'username' => 'iywuiwzjcmdppo',
-		'password' => 'd9cf1eb58f85a928bfee5e6d3386a6934c6bfbc5a8ff762eaf84cbfa95633e0d',
-		'database' => 'd4qt898so2n2hr',
+		'DSN'      => 'pgsql:host=ec2-34-253-116-145.eu-west-1.compute.amazonaws.com;port=5432;dbname=dr1ss6mnsv454;user=czomcqlkildlyo;password=8e37f007571b1d07c944478c2ac0d367d73726c22ce0189144f1b69c3525ecdb',//'pgsql:host=fyhwjzwddbxulj:bb66213e7335eae73efb2c94add11e7ba4bf1b03e661ed888cc10ac656963e94@ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/d6pl0k4sgp0a0d',
+		'hostname' => 'ec2-34-253-116-145.eu-west-1.compute.amazonaws.com',
+		'username' => 'czomcqlkildlyo',
+		'password' => '8e37f007571b1d07c944478c2ac0d367d73726c22ce0189144f1b69c3525ecdb',
+		'database' => 'dr1ss6mnsv454',
 		'DBDriver' => 'Postgre',
 		'DBPrefix' => '',
 		'pConnect' => false,
