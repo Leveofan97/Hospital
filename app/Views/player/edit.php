@@ -7,11 +7,11 @@
         <input type="hidden" name="id" value="<?= $player["id"] ?>">
 
         <div class="form-group">
-            <label for="id_team">Команда</label>
-            <input type="text" class="form-control <?= ($validation->hasError('id_team')) ? 'is-invalid' : ''; ?>" name="id_team"
-                   value="<?= $player["id_team"]; ?>">
+            <label for="id_team">Роль в команде</label>
+            <input type="text" class="form-control <?= ($validation->hasError('Amplua')) ? 'is-invalid' : ''; ?>" name="Amplua"
+                   value="<?= $player["Amplua"]; ?>">
             <div class="invalid-feedback">
-                <?= $validation->getError('id_team') ?>
+                <?= $validation->getError('Amplua') ?>
             </div>
         </div>
 
