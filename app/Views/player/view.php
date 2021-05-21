@@ -17,7 +17,17 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">ФИО: <?= esc($player['FIO']); ?></h5>
-                            <p class="card-text">Команда: <?= esc($player['id_team']); ?></p>
+                            <p class="card-text">Команда: <?php if($item['id_team'] == 1) echo("Реал Мадрид");
+                                    if($item['id_team'] == 2) echo("Манчестер Юнайтед");
+                                    if($item['id_team'] == 3) echo("Ливерпуль");
+                                    if($item['id_team'] == 4) echo("Бавария");
+                                    if($item['id_team'] == 5) echo("ПСЖ");
+                                    if($item['id_team'] == 6) echo("Атлетико М");
+                                    if($item['id_team'] == 7) echo("Ювентус");
+                                    if($item['id_team'] == 8) echo("Спартак Москва");
+                                    if($item['id_team'] == 9) echo("Зенит");
+                                    if($item['id_team'] == 10) echo("Интер Милан");
+                              ?></p>
                             <p class="card-text">Роль в команде: <?= esc($player['Amplua']); ?></p>
                         </div>
 
